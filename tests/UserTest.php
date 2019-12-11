@@ -5,7 +5,8 @@
     class UserTest extends TestCase {
 
         public function testReturnsFullName() {
-            require "User.php";
+            // loading user class using autoloader
+            // require "User.php";
 
             $user = new User;
             $user->first_name = "Tom";

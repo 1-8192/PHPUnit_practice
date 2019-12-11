@@ -64,6 +64,10 @@ class ComposerStaticInit27e693ff5971c0d49176ff7c3933d2d7
         ),
     );
 
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/src',
+    );
+
     public static $classMap = array (
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
@@ -620,6 +624,7 @@ class ComposerStaticInit27e693ff5971c0d49176ff7c3933d2d7
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit27e693ff5971c0d49176ff7c3933d2d7::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit27e693ff5971c0d49176ff7c3933d2d7::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit27e693ff5971c0d49176ff7c3933d2d7::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInit27e693ff5971c0d49176ff7c3933d2d7::$classMap;
 
         }, null, ClassLoader::class);
