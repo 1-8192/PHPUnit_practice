@@ -24,5 +24,15 @@
 
             $this->assertEquals("", $user->getFullName());
         }
+
+        public function testNotificationSent() {
+            $user = new User;
+            $user->email = "test@test.com";
+            $mock_mailer = $this->createMock(Mailer::class);
+            $mock_mailer->expects($this->once())->method('sendMessage')->willReturn(true);
+            $user->setMailer($mock_mailer);
+
+            $this->assertTrue($user->notify("Hello"));
+        }
     }
 ?>
