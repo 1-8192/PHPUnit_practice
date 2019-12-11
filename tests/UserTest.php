@@ -14,7 +14,10 @@
             $this->assertEquals("Tom Test", $user->getFullName());
         }
 
-        public function testFullNameIsEmptyByDefault() {
+        /**
+         * @test tells PHPUnit this is test even w/o test in name
+         */
+        public function full_name_is_empty_by_default() {
 
             $user = new User;
 
